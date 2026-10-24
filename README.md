@@ -2,74 +2,287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AJ Visual Arts</title>
-  <style>
-    body {
-      margin: 0;
-      background: #111;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-    header {
-      padding: 60px 20px;
-      background: #191919;
-    }
-    h1 {
-      color: #d6b36a;
-      font-size: 38px;
-    }
-    p {
-      line-height: 1.7;
-      color: #ddd;
-    }
-    section {
-      padding: 30px 20px;
-    }
-    .button {
-      display: inline-block;
-      background: #d6b36a;
-      color: #111;
-      padding: 14px 22px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    footer {
-      padding: 20px;
-      color: #aaa;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101010">
+<meta name="description" content="AJ Visual Arts - Professional graduation photography and videography in Tanzania.">
+<title>AJ Visual Arts | Capture Your Moment</title>
+<style>
+:root {
+  --gold: #d6b36a;
+  --black: #101010;
+  --card: #191919;
+  --muted: #b9b9b9;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--black);
+  color: white;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+a { text-decoration: none; }
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 7%;
+  border-bottom: 1px solid #292929;
+}
+.logo {
+  color: var(--gold);
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+nav a { color: white; font-size: 13px; }
+.hero {
+  padding: 85px 7% 75px;
+  text-align: center;
+  background: linear-gradient(#101010d9, #101010f2),
+    url("https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1600&q=85") center/cover;
+}
+.eyebrow {
+  color: var(--gold);
+  letter-spacing: 4px;
+  font-size: 11px;
+  font-weight: bold;
+}
+h1 {
+  font-size: clamp(38px, 9vw, 68px);
+  line-height: 1.08;
+  margin: 20px 0;
+}
+h1 span, h2 span { color: var(--gold); }
+.hero p {
+  max-width: 540px;
+  margin: 0 auto 28px;
+  color: #ddd;
+}
+.btn {
+  display: inline-block;
+  padding: 13px 21px;
+  background: var(--gold);
+  color: #111;
+  font-weight: bold;
+  border-radius: 3px;
+  font-size: 13px;
+}
+.btn-outline {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  margin-left: 8px;
+}
+section { padding: 65px 7%; }
+.section-title { text-align: center; margin-bottom: 35px; }
+.section-title h2 { font-size: 30px; margin: 8px 0; }
+.section-title p { color: var(--muted); font-size: 14px; }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.gallery img {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.packages {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+.package {
+  background: var(--card);
+  border: 1px solid #343434;
+  border-radius: 6px;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.package.featured { border-color: var(--gold); }
+.package h3 { margin: 0; font-size: 17px; }
+.price {
+  color: var(--gold);
+  font-size: 29px;
+  font-weight: bold;
+  margin: 12px 0;
+}
+.price small { font-size: 12px; }
+.package ul {
+  padding-left: 19px;
+  color: #ddd;
+  font-size: 13px;
+  flex: 1;
+}
+.package li { margin-bottom: 10px; }
+.package .btn { text-align: center; margin-top: 15px; }
+.tag {
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+.about {
+  text-align: center;
+  background: #171717;
+}
+.about p {
+  max-width: 600px;
+  margin: auto;
+  color: #ccc;
+}
+.contact { text-align: center; }
+.contact p { color: var(--muted); }
+footer {
+  text-align: center;
+  border-top: 1px solid #292929;
+  padding: 24px 15px;
+  color: #999;
+  font-size: 12px;
+}
+footer span { color: var(--gold); }
+@media (max-width: 760px) {
+  .packages { grid-template-columns: 1fr; }
+  .package { padding: 25px; }
+  .gallery img { height: 145px; }
+  section { padding: 50px 6%; }
+  .hero { padding: 70px 6%; }
+  .btn-outline { margin: 12px 0 0; }
+}
+</style>
 </head>
 <body>
-  <header>
-    <h1>AJ VISUAL ARTS</h1>
-    <p>Photography & Videography</p>
-    <p>We turn your special moments into lasting memories.</p>
-    <a class="button" href="#services">Explore Our Services</a>
-  </header>
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <p>Graduation Photography</p>
-    <p>Event Photography & Videography</p>
-    <p>Wedding Coverage</p>
-    <p>Professional Photo Frames</p>
-  </section>
+<nav>
+  <a class="logo" href="#">AJ VISUAL ARTS</a>
+  <a href="#packages">OUR PACKAGES ↓</a>
+</nav>
 
-  <section>
-    <h2>Let's Work Together</h2>
-    <p>Contact us to discuss your next project.</p>
-    <a class="button"
-       href="https://wa.me/255710007506">
-       Chat on WhatsApp
-    </a>
-  </section>
+<header class="hero">
+  <div class="eyebrow">PHOTOGRAPHY • VIDEOGRAPHY</div>
+  <h1>Your Moments.<br><span>Our Art.</span></h1>
+  <p>
+    Professional graduation photography and videography.
+    We turn your most important milestones into timeless memories.
+  </p>
+  <a class="btn" href="#packages">VIEW PACKAGES</a>
+  <a class="btn btn-outline" href="#contact">CONTACT US</a>
+</header>
 
-  <footer>
-    © 2026 AJ Visual Arts
-  </footer>
+<section id="portfolio">
+  <div class="section-title">
+    <div class="eyebrow">OUR PORTFOLIO</div>
+    <h2>Moments Worth <span>Keeping</span></h2>
+    <p>Sample photography inspiration. Replace these with your own work when ready.</p>
+  </div>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=700&q=80" alt="Graduates celebrating">
+    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=700&q=80" alt="Portrait photography example">
+    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=700&q=80" alt="Special occasion photography">
+    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=700&q=80" alt="Event photography example">
+  </div>
+</section>
+
+<section id="packages">
+  <div class="section-title">
+    <div class="eyebrow">INVEST IN YOUR MEMORIES</div>
+    <h2>Graduation <span>Packages</span></h2>
+    <p>Choose the package that suits your celebration.</p>
+  </div>
+
+  <div class="packages">
+    <article class="package">
+      <div class="tag">PACKAGE 01</div>
+      <h3>Essential</h3>
+      <div class="price">250,000 <small>TZS</small></div>
+      <ul>
+        <li>50 edited photos</li>
+        <li>1-minute highlight video</li>
+        <li>A3 wooden frame</li>
+      </ul>
+      <a class="btn book" href="#contact" data-package="Essential - TZS 250,000">BOOK THIS PACKAGE</a>
+    </article>
+
+    <article class="package featured">
+      <div class="tag">PACKAGE 02 • POPULAR</div>
+      <h3>Premium</h3>
+      <div class="price">450,000 <small>TZS</small></div>
+      <ul>
+        <li>100 edited photos</li>
+        <li>Full video coverage</li>
+        <li>2-minute highlight video</li>
+        <li>A2 frame</li>
+      </ul>
+      <a class="btn book" href="#contact" data-package="Premium - TZS 450,000">BOOK THIS PACKAGE</a>
+    </article>
+
+    <article class="package">
+      <div class="tag">PACKAGE 03</div>
+      <h3>Luxury</h3>
+      <div class="price">800,000 <small>TZS</small></div>
+      <ul>
+        <li>200 edited photos</li>
+        <li>Full video coverage</li>
+        <li>3-minute highlight video</li>
+        <li>Online photo link and album</li>
+        <li>32GB flash drive</li>
+        <li>A3–A2 frame</li>
+      </ul>
+      <a class="btn book" href="#contact" data-package="Luxury - TZS 800,000">BOOK THIS PACKAGE</a>
+    </article>
+  </div>
+</section>
+
+<section class="about">
+  <div class="eyebrow">WHY AJ VISUAL ARTS</div>
+  <h2>Every Detail. <span>Every Memory.</span></h2>
+  <p>
+    We are passionate about capturing your achievements,
+    emotions and special occasions through photography and film.
+    Let us tell your story beautifully.
+  </p>
+</section>
+
+<section class="contact" id="contact">
+  <div class="eyebrow">LET'S CREATE SOMETHING SPECIAL</div>
+  <h2>Book Your <span>Session</span></h2>
+  <p>Contact us to check availability and reserve your date.</p>
+  <a class="btn" id="whatsapp" href="https://wa.me/255710007506">
+    BOOK VIA WHATSAPP
+  </a>
+  <p><small>Instagram: @Aj_visual_arts</small></p>
+</section>
+
+<footer>
+  © 2026 <span>AJ VISUAL ARTS</span>. All rights reserved.
+</footer>
+
+<script>
+const whatsappNumber = "255700000000";
+
+document.querySelectorAll(".book").forEach(button => {
+  button.addEventListener("click", function(event) {
+    event.preventDefault();
+    const selected = this.dataset.package;
+    const message = "Hello AJ Visual Arts! I am interested in the " +
+      selected + " graduation package. Please share more details.";
+    window.location.href = "https://wa.me/" + whatsappNumber +
+      "?text=" + encodeURIComponent(message);
+  });
+});
+
+document.getElementById("whatsapp").href =
+  "https://wa.me/" + 255710007506 +
+  "?text=" + encodeURIComponent(
+    "Hello AJ Visual Arts! I would like to book a photography session."
+  );
+</script>
+
 </body>
 </html>
