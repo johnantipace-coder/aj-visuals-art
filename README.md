@@ -63,7 +63,7 @@
     <h2>Let's Work Together</h2>
     <p>Contact us to discuss your next project.</p>
     <a class="button"
-       href="https://wa.me/255700000000">
+       href="https://wa.me/255710007506">
        Chat on WhatsApp
     </a>
   </section>
