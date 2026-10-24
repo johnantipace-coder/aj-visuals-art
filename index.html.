@@ -278,7 +278,7 @@ document.querySelectorAll(".book").forEach(button => {
 });
 
 document.getElementById("whatsapp").href =
-  "https://wa.me/" + whatsappNumber +
+  "https://wa.me/" + 255710007506 +
   "?text=" + encodeURIComponent(
     "Hello AJ Visual Arts! I would like to book a photography session."
   );
