@@ -264,7 +264,7 @@ footer span { color: var(--gold); }
 </footer>
 
 <script>
-const whatsappNumber = "255700000000";
+const whatsappNumber = "255710007506";
 
 document.querySelectorAll(".book").forEach(button => {
   button.addEventListener("click", function(event) {
